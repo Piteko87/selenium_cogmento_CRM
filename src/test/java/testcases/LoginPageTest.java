@@ -9,6 +9,7 @@ import base.TestBase;
 import pages.LoginPage;
 
 public class LoginPageTest extends TestBase{
+	
 	LoginPage login;
 	public LoginPageTest() {
 		super();
