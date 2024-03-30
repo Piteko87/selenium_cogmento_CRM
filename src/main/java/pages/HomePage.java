@@ -15,6 +15,12 @@ public class HomePage extends TestBase{
 	@FindBy(xpath = "//i[@class ='users icon']")
 	WebElement contactsLink;
 	
+	@FindBy(xpath = "//i[@class ='tasks icon']")
+	WebElement taskLink;
+	
+	@FindBy(xpath = "//i[@class ='money icon']")
+	WebElement dealsLink;
+	
 	@FindBy(css = "#main-nav")
 	WebElement navBar;
 	//initializing page factory elements
@@ -24,6 +30,10 @@ public class HomePage extends TestBase{
 	
 	public String verifyTitle() {
 		return driver.getTitle();
+	}
+	
+	public String verifyUserName() {
+		return userLabel.getText();
 	}
 	
 	public ContactsPage clickonContactList() throws InterruptedException {

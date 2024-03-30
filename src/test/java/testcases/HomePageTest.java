@@ -31,7 +31,13 @@ public class HomePageTest extends TestBase{
 		Assert.assertEquals(title, "Cogmento CRM","Home page title not match");
 	}
 	
-	@Test
+	@Test(priority = 1)
+	public void homePageUserTest() {
+		String title = home.verifyUserName();
+		Assert.assertEquals(title, "tester sadcv","Home page user not match");
+	}
+	
+	@Test(priority = 2)
 	public void clickContactsTest() throws InterruptedException {
 		home.clickonContactList();
 	}
