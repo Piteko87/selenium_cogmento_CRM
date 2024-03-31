@@ -1,14 +1,16 @@
 # selenium_cogmento_CRM
 #### Automatizacion de CRM 
 
-<p>Estoy realizando un ejercicio de automatización de un crm en la siguiente pagina https://freecrm.com/
+Estoy realizando un ejercicio de automatización de un crm en la siguiente pagina https://freecrm.com/
 
-  Es una forma de no perder la practica de la automatizacion.</p>
+Es una forma de no perder la practica de la automatizacion.
+
+Todo Esta en la Rama **MASTER**
 
 ##### Herramientas que estoy utilizando:
-<ol>
-<li>Selenium 4.18.1</li>
-<li>TestNG 7.1.0</li>
-<li>Page Factory</li>
-<li>Extent Report</li>
-</ol>
+
+1. Selenium 4.18.1
+2. TestNG 7.1.0
+3. Page Factory
+4. Extent Report
+
