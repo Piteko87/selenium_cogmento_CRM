@@ -37,7 +37,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofMinutes(2));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		
 		driver.get(prop.getProperty("url"));
+
 	}
 }

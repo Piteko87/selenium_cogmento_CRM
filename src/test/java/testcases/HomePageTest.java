@@ -39,10 +39,8 @@ public class HomePageTest extends TestBase{
 	
 	@Test(priority = 2)
 	public void clickContactsTest() throws InterruptedException {
-		home.clickonContactList();
+		home.clickOnMenuButton("calendar");
 	}
-	
-	
 	
 	@AfterMethod
 	public void tearDown() {
