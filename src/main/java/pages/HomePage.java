@@ -86,7 +86,7 @@ public class HomePage extends TestBase {
 	    * <li>forms</li>
 	    * <li>reports</li>
 	    */
-	public TestBase clickOnMenuButton(String menu) throws InterruptedException {
+	public Object clickOnMenuButton(String menu) throws InterruptedException {
 
 		Thread.sleep(3000);
 		Actions acts = new Actions(driver);
@@ -96,7 +96,7 @@ public class HomePage extends TestBase {
 			homeLink.click();
 			acts.moveToElement(userLabel).perform();
 			Thread.sleep(3000);
-			return new ContactsPage();
+			return new HomePage();
 		}
 		if (menu.equals("calendar")) {
 			calendarLink.click();

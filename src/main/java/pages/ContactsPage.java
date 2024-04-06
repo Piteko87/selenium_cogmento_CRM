@@ -18,4 +18,15 @@ public class ContactsPage extends TestBase{
 		PageFactory.initElements(driver,this);
 	}
 	
+	public String verifyContactsPage() {
+		
+		return contactsLabel.getText();	
+	}
+	
+	public NewContact createContact() {
+		createButton.click();
+		return new NewContact();
+	}
+	
+	
 }

@@ -25,16 +25,12 @@ public class HomePageTest extends TestBase{
 		home = login.login(prop.getProperty("email"),prop.getProperty("pass"));
 	}
 	
-	@Test(enabled = false)
-	public void homePageTitleTest() {
+	@Test(priority = 1)
+	public void homePageLabelsTest() {
 		String title = home.verifyTitle();
 		Assert.assertEquals(title, "Cogmento CRM","Home page title not match");
-	}
-	
-	@Test(priority = 1)
-	public void homePageUserTest() {
-		String title = home.verifyUserName();
-		Assert.assertEquals(title, "tester sadcv","Home page user not match");
+		String user = home.verifyUserName();
+		Assert.assertEquals(user, "tester sadcv","Home page user not match");
 	}
 	
 	@Test(priority = 2)
