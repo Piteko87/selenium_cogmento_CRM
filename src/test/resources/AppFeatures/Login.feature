@@ -19,5 +19,6 @@
 Feature: Login
 
   Scenario: Positive login
-    Given A valid user
-    When the Home page should be returned
+    Given I enter a valid username and password
+    When I click the login button
+    Then I should be logged in succesfully

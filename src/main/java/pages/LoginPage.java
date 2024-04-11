@@ -10,10 +10,10 @@ public class LoginPage extends TestBase{
 	
 	//Page Factory Elements
 	@FindBy(name ="email")
-	WebElement email;
+	WebElement emailinput;
 	
 	@FindBy(name ="password")
-	WebElement password;
+	WebElement passwordInput;
 	
 	@FindBy(xpath = "//div[@class='ui fluid large blue submit button']")
 	WebElement loginButton;
@@ -23,17 +23,17 @@ public class LoginPage extends TestBase{
 		PageFactory.initElements(driver,this);
 	}
 	
-	//Page Actions
-	public String validateLoginPageTitle() {
-		return driver.getTitle();
+	public void enterEmail(String email) {
+		emailinput.sendKeys(email);
 	}
 	
-	public HomePage login(String email , String password) {
-		
-		this.email.sendKeys(email);
-		this.password.sendKeys(password);
+	public void enterPassword(String password) {
+		passwordInput.sendKeys(password);
+	}
+	
+	public HomePage clickLoginButton() {
 		loginButton.click();
-		
 		return new HomePage();
 	}
+
 }
