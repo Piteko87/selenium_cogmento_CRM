@@ -22,3 +22,12 @@ Feature: Login
     Given I enter a valid username and password
     When I click the login button
     Then I should be logged in succesfully
+
+  Scenario Outline: Negative login
+    Given I enter a valid "<username>" and there is NO password
+    When I click the login button
+    Then Invalid request "<message>" should be displayed
+      
+  Examples:
+    | username			|	message					|
+    | invalid@email	| Invalid request	|

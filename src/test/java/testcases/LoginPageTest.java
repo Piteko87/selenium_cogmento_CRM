@@ -41,7 +41,6 @@ public class LoginPageTest extends TestBase {
 
 	@When("I click the login button")
 	public void i_click_the_login_button() {
-	
 		home = new HomePage();
 		home = login.clickLoginButton();
 	}
@@ -51,4 +50,16 @@ public class LoginPageTest extends TestBase {
 		
 		assertEquals(home.verifyUserName(), "tester sadcv");
 	}
+	
+	@Given("I enter a valid {string} and there is NO password")
+	public void i_enter_a_valid_and_there_is_no_password(String string) {
+		login.enterEmail(string);
+	}
+
+	@Then("Invalid request {string} should be displayed")
+	public void invalid_request_should_be_displayed(String string) {
+		
+		assertEquals(login.invalidLabelText(), string);
+	}
+
 }

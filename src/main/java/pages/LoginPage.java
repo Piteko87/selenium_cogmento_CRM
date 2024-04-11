@@ -18,6 +18,9 @@ public class LoginPage extends TestBase{
 	@FindBy(xpath = "//div[@class='ui fluid large blue submit button']")
 	WebElement loginButton;
 	
+	@FindBy(xpath = "//p[contains(text(), 'Invalid request')]")
+	WebElement invalidLabel;
+	
 	//initializing page factory elements
 	public LoginPage() {
 		PageFactory.initElements(driver,this);
@@ -35,5 +38,8 @@ public class LoginPage extends TestBase{
 		loginButton.click();
 		return new HomePage();
 	}
-
+	
+	public String invalidLabelText() {
+		return invalidLabel.getText();
+	}
 }
