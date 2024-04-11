@@ -12,5 +12,6 @@ Todo Esta en la Rama **MASTER**
 1. Selenium 4.18.1
 2. TestNG 7.1.0
 3. Page Factory
-4. Extent Report
+4. Extent Report --
+5. Cucumber 7.15.0
 
